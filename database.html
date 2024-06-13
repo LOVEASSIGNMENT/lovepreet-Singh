@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outdoor Games - Database Plan</title>
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/database.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #eeeeee;
+            margin: 0;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px;
+            background: #1f1f1f;
+            border-bottom: 2px solid #444;
+        }
+
+        header h1 {
+            font-size: 3em;
+            color: #00e676;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #00e676;
+            margin-top: 30px;
+        }
+
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid #444;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+        }
+
+        td {
+            background-color: #2b2b2b;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="forms.html">Form Elements</a></li>
+            <li><a href="proposal.html">Proposal</a></li>
+            <li><a href="database.html">Database Plan</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Database Integration Plan</h1>
+    </header>
+    <main>
+        <div class="section">
+            <h2>Players/Coaches/Sport Professionals:</h2>
+            <p>The database will store information about players, coaches, and other sport professionals, including their profiles, achievements, and contact details. It will facilitate efficient data management and retrieval for all users.</p>
+        </div>
+        <div class="section">
+            <h2>Database Structure:</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Table Name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Users</td>
+                        <td>Stores information about the users including players, coaches, and sports professionals.</td>
+                    </tr>
+                    <tr>
+                        <td>Sports</td>
+                        <td>Contains details about various sports categories available on the platform.</td>
+                    </tr>
+                    <tr>
+                        <td>Articles</td>
+                        <td>Holds articles and guides related to outdoor sports.</td>
+                    </tr>
+                    <tr>
+                        <td>TrainingPrograms</td>
+                        <td>Stores training routines and fitness programs for athletes.</td>
+                    </tr>
+                    <tr>
+                        <td>UserInteractions</td>
+                        <td>Logs user activities and interactions within the platform.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="section">
+            <h2>Key Fields:</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Field</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>UserID</td>
+                        <td>INT</td>
+                        <td>Primary key for the Users table.</td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>VARCHAR(100)</td>
+                        <td>Name of the user.</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>VARCHAR(100)</td>
+                        <td>Email address of the user.</td>
+                    </tr>
+                    <tr>
+                        <td>Role</td>
+                        <td>VARCHAR(50)</td>
+                        <td>User's role (e.g., player, coach).</td>
+                    </tr>
+                    <tr>
+                        <td>SportID</td>
+                        <td>INT</td>
+                        <td>Foreign key linking to the Sports table.</td>
+                    </tr>
+                    <tr>
+                        <td>ArticleID</td>
+                        <td>INT</td>
+                        <td>Primary key for the Articles table.</td>
+                    </tr>
+                    <tr>
+                        <td>Title</td>
+                        <td>VARCHAR(200)</td>
+                        <td>Title of the article.</td>
+                    </tr>
+                    <tr>
+                        <td>Content</td>
+                        <td>TEXT</td>
+                        <td>Content of the article.</td>
+                    </tr>
+                    <tr>
+                        <td>Author</td>
+                        <td>VARCHAR(100)</td>
+                        <td>Author of the article.</td>
+                    </tr>
+                    <tr>
+                        <td>Date</td>
+                        <td>DATE</td>
+                        <td>Publication date of the article.</td>
+                    </tr>
+                    <tr>
+                        <td>ProgramID</td>
+                        <td>INT</td>
+                        <td>Primary key for the TrainingPrograms table.</td>
+                    </tr>
+                    <tr>
+                        <td>ProgramName</td>
+                        <td>VARCHAR(100)</td>
+                        <td>Name of the training program.</td>
+                    </tr>
+                    <tr>
+                        <td>Description</td>
+                        <td>TEXT</td>
+                        <td>Description of the training program.</td>
+                    </tr>
+                    <tr>
+                        <td>Duration</td>
+                        <td>INT</td>
+                        <td>Duration of the training program in days.</td>
+                    </tr>
+                    <tr>
+                        <td>InteractionID</td>
+                        <td>INT</td>
+                        <td>Primary key for the UserInteractions table.</td>
+                    </tr>
+                    <tr>
+                        <td>UserID</td>
+                        <td>INT</td>
+                        <td>Foreign key linking to the Users table.</td>
+                    </tr>
+                    <tr>
+                        <td>Action</td>
+                        <td>VARCHAR(100)</td>
+                        <td>Type of user action (e.g., login, comment).</td>
+                    </tr>
+                    <tr>
+                        <td>Timestamp</td>
+                        <td>TIMESTAMP</td>
+                        <td>Time when the action occurred.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>

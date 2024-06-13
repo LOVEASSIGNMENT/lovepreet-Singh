@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Outdoor Games</title>
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/about.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #eeeeee;
+            margin: 0;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px;
+            background: #1f1f1f;
+            border-bottom: 2px solid #444;
+        }
+
+        header h1 {
+            font-size: 3em;
+            color: #00e676;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .section h2 {
+            color: #00e676;
+            margin-top: 0;
+        }
+
+        .section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            text-align: justify;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background-color: #1e1e1e;
+            color: #eeeeee;
+        }
+
+        .contact-form button {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #00e676;
+            color: #1e1e1e;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #00c667;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="forms.html">Form Elements</a></li>
+            <li><a href="proposal.html">Proposal</a></li>
+            <li><a href="database.html">Database Plan</a></li>
+            <li><a href="about.html">About Me</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>About Me</h1>
+    </header>
+    <main>
+        <section class="section">
+            <h2>Introduction</h2>
+            <img src="Lovepreet.jfif" alt="Your Name" width="250"  height="100">
+            <p>Hello! I'm Lovepreet SIngh, the creator of the Outdoor Games website. My passion for web development and outdoor sports led me to create this platform to share knowledge and inspire others.</p>
+        </section>
+        <section class="section">
+            <h2>Background</h2>
+            <p>I hold a degree in Computer Engineering technician from Northern college. I have also completed several web development courses, including HTML, CSS, JavaScript, and other IT skills, to enhance my knowledge and skills in this field.</p>
+        </section>
+        <section class="section">
+            <h2>Skills</h2>
+            <p>I am proficient in:</p>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Responsive Web Design</li>
+                <li>Version Control (Git)</li>
+                <li>Basic PHP and MySQL</li>
+            </ul>
+        </section>
+        <section class="section">
+            <h2>Projects</h2>
+            <p>Here are some of the projects I have worked on:</p>
+            <ul>
+                <li><a href="https://github.com/your-github-profile/your-project-1" target="_blank">Project 1</a> - Description of Project 1</li>
+                <li><a href="https://github.com/your-github-profile/your-project-2" target="_blank">Project 2</a> - Description of Project 2</li>
+                <li><a href="https://github.com/your-github-profile/your-project-3" target="_blank">Project 3</a> - Description of Project 3</li>
+            </ul>
+        </section>
+        <section class="section">
+            <h2>Contact Information</h2>
+            <p>If you have any questions or would like to get in touch, please use the contact form below:</p>
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
